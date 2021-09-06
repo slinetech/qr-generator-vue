@@ -35,17 +35,17 @@ export default {
             if (this.textoConvert != '') {
                 this.textConvert = this.textoConvert;
                 this.textoConvert = '';
-                this.$refs.inputTextToConvert.focus();
                 this.showQr = true;
             }else{
                 this.showQr=false;
             }
+            this.$refs.inputTextToConvert.focus();
         }
     }
 }
 </script>
 <style scoped>
-.title-cm{
-    font-weight: 600;
-}
+    .title-cm{
+        font-weight: 600;
+    }
 </style>
