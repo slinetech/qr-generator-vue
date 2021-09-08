@@ -1,5 +1,8 @@
 <template>
     <div class="container">
+        <div v-if="msg.showMsg" class="alert" :class="{'alert-success': msg.succ, 'alert-danger': msg.err,'d-none': !msg.showMsg}" role="alert">
+            {{ msg.data }}
+        </div>
         <div class="row justify-content-center">
             <div class="col-md-4 col-sm-12">
                 <div class="mb-3">
@@ -26,7 +29,13 @@ export default {
         return {
             textConvert: '',
             textoConvert: '',
-            showQr: false
+            showQr: false,
+            msg:{
+                showMsg: false,
+                err: false,
+                succ: false,
+                data:''
+            }
         }
     },
     components: {
@@ -37,14 +46,30 @@ export default {
     },
     methods:{
         generate(){
-            if (this.textoConvert != '') {
+            if (this.textoConvert != '') {// Validate input is't empty
                 this.textConvert = this.textoConvert;
                 this.textoConvert = '';
                 this.showQr = true;
+                this.changeMsg('succ');
+                console.log(this.msg);
             }else{
+                this.changeMsg('err');
+                console.log(this.msg);
                 this.showQr=false;
             }
             this.$refs.inputTextToConvert.focus();
+        },
+        changeMsg(type){
+            this.msg.showMsg=true;
+            if( type == 'succ' ){
+                this.msg.err= false;
+                this.msg.succ = true;
+                this.msg.data = "Successfull"
+            }else{
+                this.msg.succ= false;
+                this.msg.err= true;
+                this.msg.data="Error!! -> Input is Empty"
+            }
         }
     }
 }
