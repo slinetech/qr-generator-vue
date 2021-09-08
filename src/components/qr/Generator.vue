@@ -6,8 +6,8 @@
         <div class="row justify-content-center">
             <div class="col-md-4 col-sm-12">
                 <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label title-cm">Text to Corvert</label>
-                    <input ref="inputTextToConvert" v-model="textoConvert" type="text" class="form-control" id="exampleFormControlInput1" placeholder="https://www.google.com">
+                    <label for="inputTextConvert" class="form-label title-cm text-center label-form">Text to Corvert</label>
+                    <input ref="inputTextToConvert" v-model="textoConvert" type="text" class="form-control" id="inputTextConvert" placeholder="https://www.google.com">
                 </div>
             </div>
             <div class="col-md-2 col-sm-12 pl-0-pr-0">
@@ -82,6 +82,10 @@ export default {
     .btn-generate{
             width: 100%;
         }
+    .label-form{
+        width: 100%;
+        text-transform: uppercase;
+    }
     /*Small devices (landscape phones, 576px and up)*/
     @media (min-width: 576px) {
         .mt-30{
