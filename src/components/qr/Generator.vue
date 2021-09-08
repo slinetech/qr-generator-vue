@@ -70,6 +70,7 @@ export default {
                 this.msg.err= true;
                 this.msg.data="Error!! -> Input is Empty"
             }
+            setTimeout(()=>{this.msg.showMsg=false},3000);
         }
     }
 }
