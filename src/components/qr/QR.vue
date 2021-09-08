@@ -1,6 +1,10 @@
 <template>
-    <div class="container">
-        <vue-qr :text="text" qid="testid"></vue-qr>
+    <div class="container mt-60">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-sm-12 text-center">
+                <vue-qr :text="text" qid="testid"></vue-qr>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -19,5 +23,7 @@ export default {
 </script>
 
 <style scoped>
-
+    .mt-60{
+        margin-top: 60px;
+    }
 </style>
