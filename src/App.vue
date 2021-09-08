@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar navbar-light navbar-bg">
       <div class="container-fluid t-c">
-        <a class="navbar-brand" href="/">Generator QR Code</a>
+        <h1>
+          <a class="navbar-brand app-tittle-color" href="/">Generator QR Code</a>
+        </h1>
       </div>
     </nav>
     <Generator />
@@ -21,6 +23,12 @@ export default {
 </script>
 
 <style>
+  .app-tittle-color{
+    color: white !important;
+  }
+  .navbar-bg{
+    background-color: #4caf50 !important;
+  }
   .t-c{
     display: inline-block !important;
     text-align: center;
