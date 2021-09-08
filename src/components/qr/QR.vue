@@ -4,6 +4,9 @@
             <div class="col-md-6 col-sm-12 text-center">
                 <vue-qr :text="text" qid="testid"></vue-qr>
             </div>
+            <div class="col-12 text-center bk-word">
+                {{text}}
+            </div>
         </div>
     </div>
 </template>
@@ -25,5 +28,8 @@ export default {
 <style scoped>
     .mt-60{
         margin-top: 60px;
+    }
+    .bk-word{
+        word-break: break-all;
     }
 </style>
