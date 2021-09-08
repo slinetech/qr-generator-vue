@@ -80,8 +80,18 @@ export default {
         font-weight: 600;
     }
     .btn-generate{
-            width: 100%;
-        }
+        width: 100%;
+        background-color: #8bc34a;
+        border-color: #8bc34a;
+    }
+    .form-control:focus{
+        border-color: #8bc34a !important;
+        box-shadow: 0 0 0 0.25rem rgb(139 195 74 / 25%);
+    }
+    .btn-generate:hover{
+        background-color: #88dd27;
+        border-color: #88dd27;
+    }
     .label-form{
         width: 100%;
         text-transform: uppercase;
